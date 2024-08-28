@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>   
+        Body {  
+          font-family: Calibri, Helvetica, sans-serif;  
+          background-color: rgba(208, 208, 211, 0.844);  
+        }  
+        button {   
+               background-color: #b73434;   
+               width: 100%;  
+                color: rgb(222, 222, 210);   
+                padding: 15px;   
+                margin: 10px 0px;   
+                border: none;   
+                cursor: pointer;   
+                 }   
+          
+         input[type=text], input[type=password] {   
+                width: 100%;   
+                margin: 8px 0;  
+                padding: 12px 20px;   
+                display: inline-block;   
+                border: 2px solid rgb(40, 42, 40);   
+                box-sizing: border-box;   
+            }  
+         
+          .cancelbtn {   
+                width: auto;   
+                padding: 10px 18px;  
+                margin: 1px 5px;  
+            }   
+            button:hover {   
+                opacity: 0.7;   
+            }   
+             
+         .container {  
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px; 
+                padding: 20px;   
+                border-radius: 5px;
+                background-color: rgb(226, 232, 232);  
+            }   
+        </style>   
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            
+            // Get the username and password values (just as a demo)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Normally you would validate the credentials here (e.g., via an AJAX request)
+            // For this example, let's assume they are always correct
+
+            // Redirect to the next page
+            if (username && password) {
+                window.location.href = 'https://www.augment.com/blocks/ar-viewer/'; // Redirect to the next page
+            } else {
+                alert('Please enter both username and password.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="handleLogin(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter password" name="password" required><br><br>
+        <button type="submit">Login</button>   
+        <input type="checkbox" checked="checked"> Remember me   
+        <button type="button" class="cancelbtn"> Cancel</button>  <br> 
+        Forgot <a href="newsort.html"> password? </a> 
+    </form>
+    </div>
+</body>
+</html>

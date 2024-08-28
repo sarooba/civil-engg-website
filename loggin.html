@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0px;
+            text-align: center;
+        }
+        footer {
+            background-color:#150444;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        Body {  
+          font-family: Calibri, Helvetica, sans-serif;  
+          background-color: rgba(253, 253, 253, 0.927);  
+        }  
+        button {   
+               background-color: #b73434;   
+               width: 100%;  
+                color: rgb(253, 251, 250);   
+                padding: 15px;   
+                margin: 10px 0px;   
+                border: none;   
+                cursor: pointer;   
+                 }   
+          
+         input[type=text], input[type=password] {   
+                width: 100%;   
+                margin: 8px 0;  
+                padding: 12px 20px;   
+                display: inline-block;   
+                border: 2px solid rgb(40, 42, 40);   
+                box-sizing: border-box;   
+            }  
+         
+          .cancelbtn {   
+                width: auto;   
+                padding: 10px 18px;  
+                margin: 1px 5px;  
+            }   
+            button:hover {   
+                opacity: 0.7;   
+            }   
+             
+         .container {  
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 50px; 
+                padding: 20px;   
+                border-radius: 5px;
+                background-color: rgba(140, 237, 226, 0.529);  
+            }   
+        header {
+            background-color:  #150444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #5b616d;
+            color: #e7e5e5;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 20px;
+        }
+        nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(248, 244, 244);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+.start-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .start-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+     <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            
+            // Get the username and password values (just as a demo)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Normally you would validate the credentials here (e.g., via an AJAX request)
+            // For this example, let's assume they are always correct
+
+            // Redirect to the next page
+            if (username && password) {
+                window.location.href = 'https://www.augment.com/blocks/ar-viewer/'; // Redirect to the next page
+            } else {
+                alert('Please enter both username and password.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Seek Engineer</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="ar.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="loggin.html">Login</a></li>
+                <a href="'https://www.augment.com/blocks/ar-viewer/'" class="start-button">Start for Free</a>
+               <!-- <a href="loggin.html">Go to Page 2</a>-->
+                
+            </ul>
+        </nav>
+
+        <div class="container">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter username" name="username" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password" name="password" required><br><br>
+                <button type="submit">Login</button>   
+                <input type="checkbox" checked="checked"> Remember me   
+                <button type="button" class="cancelbtn"> Cancel</button>  <br> 
+                Forgot <a href="newsort.html"> password? </a> 
+            </form>
+            </div>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
